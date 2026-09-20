@@ -36,6 +36,7 @@ body {
     font-family: "Manrope", sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    perspective: 1800px;
 }
 body::before {
     content: "";
@@ -43,14 +44,13 @@ body::before {
     inset: 0;
     z-index: -2;
     pointer-events: none;
-    opacity: .4;
+    opacity: .38;
     background-image:
         linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-    background-size: 30px 30px;
+    background-size: 28px 28px;
     mask-image: radial-gradient(circle at center, black 42%, transparent 100%);
 }
-
 body::after {
     content: "";
     position: fixed;
@@ -73,6 +73,7 @@ a { color: inherit; }
     position: fixed; z-index: -1; width: 440px; height: 440px;
     border-radius: 50%; filter: blur(110px); opacity: .25;
     pointer-events: none; animation: drift 18s ease-in-out infinite alternate;
+    transform-style: preserve-3d;
 }
 .ambient-blue {
     top: 18%; left: -180px;
@@ -134,6 +135,7 @@ a { color: inherit; }
 .hero {
     min-height: 100svh; display: flex; align-items: center; position: relative;
     isolation: isolate; padding: 130px 0 90px; overflow: hidden;
+    transform-style: preserve-3d;
 }
 .hero-grid {
     position: absolute; inset: 0; z-index: -1;
@@ -143,11 +145,13 @@ a { color: inherit; }
         radial-gradient(circle at 50% 0%, rgba(176,108,255,.13), transparent 58%);
     background-size: 28px 28px, 28px 28px, 100% 100%;
     mask-image: radial-gradient(circle at center, black 48%, transparent 100%);
+    transform: translateZ(-40px);
 }
 .orb {
-    position: absolute; border-radius: 50%; filter: blur(1px); opacity: .8;
+    position: absolute; border-radius: 50%; filter: blur(1px); opacity: .85;
     animation: float 10s ease-in-out infinite;
     box-shadow: inset 0 0 25px rgba(255,255,255,.12), 0 0 35px rgba(50,215,255,.12);
+    transform-style: preserve-3d;
 }
 .orb::after {
     content: ""; position: absolute; inset: 18%; border: 1px solid rgba(255,255,255,.16);
@@ -157,7 +161,11 @@ a { color: inherit; }
 .orb-two { width: 320px; height: 320px; right: 8%; top: 20%; background: radial-gradient(circle at 35% 30%, rgba(255,79,216,.9), rgba(176,108,255,.25) 42%, rgba(10,12,20,0) 72%); animation-delay: -3s; }
 .orb-three { width: 220px; height: 220px; right: 28%; bottom: 8%; background: radial-gradient(circle at 40% 40%, rgba(255,209,102,.85), rgba(255,139,94,.22) 44%, rgba(10,12,20,0) 72%); animation-delay: -5s; }
 
-.hero-content { text-align: center; }
+.hero-content {
+    text-align: center;
+    transform-style: preserve-3d;
+    transform: rotateX(2deg) rotateY(-2deg);
+}
 .eyebrow, .kicker, .project-type, .info-label, .skill-level {
     color: var(--muted); font-family: "DM Mono", monospace; text-transform: uppercase;
     letter-spacing: .12em; font-size: .72rem;
@@ -173,9 +181,13 @@ h1 { max-width: 900px; margin: 25px auto 20px; font-size: clamp(3.2rem, 10vw, 7.
 .button {
     position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
     padding: 15px 22px; border-radius: 999px; text-decoration: none; font-weight: 700;
-    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, filter .25s ease;
+    transform-style: preserve-3d;
 }
-.button:hover { transform: translateY(-2px); }
+.button:hover {
+    transform: translateY(-2px) translateZ(12px);
+    filter: brightness(1.08);
+}
 .button-primary {
     background: linear-gradient(135deg, rgba(50,215,255,.18), rgba(176,108,255,.2), rgba(255,79,216,.18));
     border: 1px solid rgba(255,255,255,.14); box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,.18);
@@ -232,6 +244,12 @@ h1 { max-width: 900px; margin: 25px auto 20px; font-size: clamp(3.2rem, 10vw, 7.
     position: relative; padding: 22px 20px; border-radius: 20px;
     background: linear-gradient(160deg, rgba(18,24,37,.9), rgba(11,16,27,.72));
     border: 1px solid rgba(255,255,255,.08); box-shadow: inset 0 1px 0 rgba(255,255,255,.06), var(--shadow-soft);
+    transform-style: preserve-3d;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.info-card:hover {
+    transform: translateY(-6px) rotateX(8deg) rotateY(-6deg);
+    box-shadow: 0 20px 38px rgba(18,29,58,.28), 0 0 18px rgba(50,215,255,.12);
 }
 .info-card::before {
     content: ""; position: absolute; inset: 0; border-radius: inherit;
@@ -246,6 +264,7 @@ h1 { max-width: 900px; margin: 25px auto 20px; font-size: clamp(3.2rem, 10vw, 7.
     background: linear-gradient(180deg, rgba(21,27,40,.96), rgba(10,13,20,.92));
     border: 1px solid rgba(255,255,255,.08); box-shadow: inset 0 1px 0 rgba(255,255,255,.04), var(--shadow-soft);
     overflow: hidden; transform-style: preserve-3d; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    will-change: transform;
 }
 .skill-card::before {
     content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top left, rgba(255,255,255,.12), transparent 38%);
@@ -256,7 +275,7 @@ h1 { max-width: 900px; margin: 25px auto 20px; font-size: clamp(3.2rem, 10vw, 7.
     background: linear-gradient(90deg, var(--accent), transparent); opacity: .85;
 }
 .skill-card:hover {
-    transform: translateY(-8px) rotateX(8deg) rotateY(-8deg);
+    transform: translateY(-10px) rotateX(10deg) rotateY(-10deg) translateZ(10px);
     border-color: rgba(255,255,255,.16);
     box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 22px 44px rgba(29,39,64,.28), 0 0 22px rgba(50,215,255,.12);
 }
@@ -264,6 +283,7 @@ h1 { max-width: 900px; margin: 25px auto 20px; font-size: clamp(3.2rem, 10vw, 7.
     width: 52px; height: 52px; border-radius: 15px; display: grid; place-items: center; font-weight: 800;
     color: var(--text); background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
     border: 1px solid rgba(255,255,255,.06); margin-bottom: 24px; box-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 0 18px rgba(50,215,255,.14);
+    transform: translateZ(18px);
 }
 .skill-card h3 { margin-top: 12px; font-size: 1.55rem; letter-spacing: -.04em; }
 .skill-card p { margin-top: 10px; color: var(--muted); }
@@ -279,15 +299,18 @@ h1 { max-width: 900px; margin: 25px auto 20px; font-size: clamp(3.2rem, 10vw, 7.
     position: relative; overflow: hidden; border-radius: 24px; background: linear-gradient(180deg, rgba(17,25,37,.94), rgba(10,13,20,.92));
     border: 1px solid rgba(255,255,255,.08); box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,.04);
     transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
 }
 .project-card:hover {
-    transform: translateY(-10px) rotateX(5deg);
+    transform: translateY(-12px) rotateX(8deg) rotateY(-8deg) translateZ(12px);
     border-color: rgba(255,255,255,.14);
     box-shadow: 0 24px 56px rgba(0,0,0,.28), 0 0 22px rgba(255,79,216,.13), inset 0 1px 0 rgba(255,255,255,.08);
 }
 .project-visual {
     position: relative; height: 210px; display: flex; align-items: end; justify-content: flex-start; padding: 20px;
     overflow: hidden; border-bottom: 1px solid rgba(255,255,255,.06);
+    transform: translateZ(24px);
 }
 .project-visual::before {
     content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.08), transparent 40%);
@@ -312,6 +335,11 @@ h1 { max-width: 900px; margin: 25px auto 20px; font-size: clamp(3.2rem, 10vw, 7.
     position: relative; overflow: hidden; text-align: center; padding: 84px 30px; border-radius: 28px;
     border: 1px solid rgba(176,108,255,.28); background: linear-gradient(135deg, rgba(13,17,26,.88), rgba(21,29,45,.9));
     box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 22px 60px rgba(13,17,29,.4), 0 0 26px rgba(50,215,255,.08);
+    transform-style: preserve-3d;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.contact-card:hover {
+    transform: translateY(-8px) rotateX(6deg) rotateY(-6deg);
 }
 .contact-card::before {
     content: ""; position: absolute; inset: 0;
