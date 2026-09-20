@@ -1,109 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Santhosh is a Computer Science student exploring software development, cybersecurity and practical projects.">
-    <title>Santhosh | Computer Science Student</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Santhosh is a Computer Science student building practical projects and exploring technology, web development, and cybersecurity."
+    />
+    <title>SANTHOSH. | Computer Science Student</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="background-grid" aria-hidden="true"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header" id="site-header">
-        <nav class="nav container" aria-label="Main navigation">
-            <a class="logo" href="#home" aria-label="Santhosh home">SANTHOSH<span>.</span></a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu">
-                <span></span><span></span>
-            </button>
-            <div class="nav-menu" id="primary-menu">
-                <a class="nav-link is-active" href="#home">Home</a>
-                <a class="nav-link" href="#about">About</a>
-                <a class="nav-link" href="#skills">Skills</a>
-                <a class="nav-link" href="#projects">Projects</a>
-                <a class="nav-link" href="#learning">Learning</a>
-                <a class="nav-link" href="#contact">Contact</a>
-            </div>
-        </nav>
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="logo" href="#home" aria-label="Santhosh home">SANTHOSH<span>.</span></a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" id="primary-menu">
+          <a class="nav-link is-active" href="#home">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#contact">Contact</a>
+
+          <div class="nav-social" aria-label="Social links">
+            <a class="nav-social-link" href="YOUR_LINKEDIN_URL" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="nav-social-link" href="https://github.com/johnsnow-cmd" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main id="main-content">
-        <section class="hero section-grid" id="home" aria-labelledby="hero-title">
-            <div class="hero-glow" aria-hidden="true"></div>
-            <div class="hero-content container reveal">
-                <p class="eyebrow"><span class="status-dot"></span> Computer Science Student</p>
-                <h1 id="hero-title">Hi, I'm <span>Santhosh</span>.</h1>
-                <p class="hero-copy">Computer Science student passionate about software development, cybersecurity and building practical projects.</p>
-                <div class="hero-actions">
-                    <a class="button button-primary" href="#projects">View My Projects <span aria-hidden="true">↗</span></a>
-                    <a class="button button-secondary" href="#contact">Contact Me</a>
-                </div>
-                <div class="social-row" aria-label="Social links">
-                    <a href="https://github.com/johnsnow-cmd/Hamster" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-                    <a href="#contact">LinkedIn <span aria-hidden="true">↗</span></a>
-                    <a href="#contact">Email <span aria-hidden="true">↗</span></a>
-                </div>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="container hero-layout">
+          <div class="hero-content reveal">
+            <p class="eyebrow"><span class="status-dot"></span> Computer Science Student</p>
+            <h1 id="hero-title">Hi, I'm <span>Santhosh</span>.</h1>
+            <p class="subtitle">Computer Science Student</p>
+            <p class="hero-copy">Building with code, exploring technology, and continuously learning.</p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#skills">View My Skills</a>
+              <a class="button button-secondary" href="YOUR_LINKEDIN_URL" target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
-            <a class="scroll-cue" href="#about"><span></span> Scroll to explore</a>
-        </section>
 
-        <section class="section" id="about" aria-labelledby="about-title">
-            <div class="container about-layout">
-                <div class="section-heading reveal">
-                    <p class="kicker">01 / Introduction</p>
-                    <h2 id="about-title">About Me</h2>
-                </div>
-                <div class="about-content reveal">
-                    <p class="lead">I'm a Computer Science student interested in software development, cybersecurity and building practical projects. I'm currently strengthening my programming fundamentals while exploring modern web technologies and backend development.</p>
-                    <div class="info-grid">
-                        <article class="info-card"><span class="info-label">Education</span><strong>B.Sc Computer Science</strong></article>
-                        <article class="info-card"><span class="info-label">College</span><strong>Sri Ramakrishna College of Arts and Science</strong></article>
-                        <article class="info-card"><span class="info-label">Focus</span><strong>Software Development <i>•</i> Cybersecurity <i>•</i> Problem Solving</strong></article>
-                    </div>
-                </div>
+            <div class="social-row" aria-label="Social media links">
+              <a href="https://github.com/johnsnow-cmd" target="_blank" rel="noreferrer">
+                <span class="social-icon" aria-hidden="true">GH</span>
+                GitHub
+              </a>
+              <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noreferrer">
+                <span class="social-icon" aria-hidden="true">IN</span>
+                LinkedIn
+              </a>
             </div>
-        </section>
+          </div>
 
-        <section class="section section-alt" id="skills" aria-labelledby="skills-title">
-            <div class="container">
-                <div class="section-heading centered reveal">
-                    <p class="kicker">02 / Toolkit</p>
-                    <h2 id="skills-title">Technical Skills</h2>
-                    <p>Technologies I'm learning and working with.</p>
+          <div class="hero-visual reveal" aria-hidden="true">
+            <div class="glass-panel tilt-card panel-main">
+              <div class="panel-header">
+                <span class="mini-dot blue"></span>
+                <span class="mini-dot purple"></span>
+                <span class="mini-dot green"></span>
+              </div>
+              <div class="panel-body">
+                <p class="panel-label">Focus</p>
+                <h2>Code. Learn. Build.</h2>
+                <div class="chip-row">
+                  <span>Python</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JS</span>
                 </div>
-                <div class="skills-grid">
-                    <article class="skill-card reveal"><div class="card-icon">&lt;/&gt;</div><h3>Programming</h3><p>Building a strong foundation through hands-on practice.</p><div class="tag-list"><span>C</span><span>Python</span></div></article>
-                    <article class="skill-card reveal"><div class="card-icon">◈</div><h3>Web Development</h3><p>Creating responsive, interactive experiences for the web.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Next.js</span></div></article>
-                    <article class="skill-card reveal"><div class="card-icon">⌘</div><h3>Tools</h3><p>Organising code and turning ideas into working builds.</p><div class="tag-list"><span>Git</span><span>GitHub</span><span>VS Code</span></div></article>
-                    <article class="skill-card reveal"><div class="card-icon">⌁</div><h3>Backend / Learning</h3><p>Exploring the systems behind useful applications.</p><div class="tag-list"><span>FastAPI</span><span>APIs</span><span>Databases</span><span>Cybersecurity fundamentals</span></div></article>
-                </div>
+              </div>
             </div>
-        </section>
 
-        <section class="section" id="projects" aria-labelledby="projects-title">
-            <div class="container">
-                <div class="section-heading projects-heading reveal"><div><p class="kicker">03 / Selected work</p><h2 id="projects-title">Featured Projects</h2></div><p>Small steps, practical solutions and room to grow.</p></div>
-                <div class="projects-grid">
-                    <article class="project-card project-featured reveal"><div class="project-visual visual-one"><span>INFRA / 01</span><div class="visual-lines" aria-hidden="true"></div></div><div class="project-body"><p class="project-type">Featured project</p><h3>Infrastructure Intelligence</h3><p>An infrastructure project management platform designed to connect planning data with real-time execution progress.</p><div class="project-tags"><span>Python</span><span>FastAPI</span><span>Next.js</span><span>Database</span><span>Excel/PDF</span></div><div class="project-links"><a href="https://github.com/johnsnow-cmd/Hamster" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#contact">Live Demo ↗</a></div></div></article>
-                    <article class="project-card placeholder-card reveal"><div class="project-visual visual-two"><span>PROJECT / 02</span></div><div class="project-body"><p class="project-type">Coming soon</p><h3>Your next project</h3><p>A space ready for another practical project, experiment or collaboration.</p><div class="project-links"><a href="#contact">Add details ↗</a></div></div></article>
-                    <article class="project-card placeholder-card reveal"><div class="project-visual visual-three"><span>PROJECT / 03</span></div><div class="project-body"><p class="project-type">Coming soon</p><h3>More to explore</h3><p>Use this slot to showcase a future build without adding invented information.</p><div class="project-links"><a href="#contact">Add details ↗</a></div></div></article>
-                </div>
+            <div class="glass-panel tilt-card panel-side panel-top">
+              <p class="panel-label">Current</p>
+              <strong>Learning</strong>
+              <span>Web Fundamentals</span>
             </div>
-        </section>
 
-        <section class="section learning-section" id="learning" aria-labelledby="learning-title">
-            <div class="container learning-layout"><div class="section-heading reveal"><p class="kicker">04 / The journey</p><h2 id="learning-title">Currently Learning</h2><p>Progress is built one curious step at a time.</p></div><div class="timeline"><article class="timeline-item reveal"><span>01</span><div><h3>Python</h3><p>Strengthening programming fundamentals.</p></div></article><article class="timeline-item reveal"><span>02</span><div><h3>Web Development</h3><p>Building responsive and interactive websites.</p></div></article><article class="timeline-item reveal"><span>03</span><div><h3>Cybersecurity</h3><p>Learning security fundamentals and concepts.</p></div></article><article class="timeline-item reveal"><span>04</span><div><h3>Backend Development</h3><p>Exploring APIs, FastAPI and databases.</p></div></article></div></div>
-        </section>
+            <div class="glass-panel tilt-card panel-side panel-bottom">
+              <p class="panel-label">Stack</p>
+              <strong>C / Python</strong>
+              <span>Git &amp; GitHub</span>
+            </div>
+          </div>
+        </div>
 
-        <section class="section beyond-section" aria-labelledby="beyond-title"><div class="container beyond-card reveal"><div><p class="kicker">05 / Beyond the screen</p><h2 id="beyond-title">Beyond Code</h2></div><div><h3>Calisthenics</h3><p>Bodyweight strength training focused on control, discipline, mobility and progressive skills.</p></div></div></section>
+        <a class="scroll-cue" href="#about"><span></span> Scroll to explore</a>
+      </section>
 
-        <section class="contact section" id="contact" aria-labelledby="contact-title"><div class="container contact-card reveal"><p class="kicker">06 / Get in touch</p><h2 id="contact-title">Let's Build Something<span>.</span></h2><p>Have a project idea, collaboration opportunity, or just want to connect?</p><div class="hero-actions"><a class="button button-primary" href="#contact-details">Email Me <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="https://github.com/johnsnow-cmd/Hamster" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></div><div class="contact-details" id="contact-details"><span>Email: add your email address</span><span>LinkedIn: add your profile URL</span></div></div></section>
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container about-layout">
+          <div class="section-heading reveal">
+            <p class="kicker">01 / Introduction</p>
+            <h2 id="about-title">About Me</h2>
+          </div>
+
+          <div class="about-content reveal">
+            <p class="lead">
+              I'm a Computer Science student interested in programming, web development, and exploring cybersecurity.
+              I'm focused on strengthening my fundamentals, building practical projects, and continuously learning new technologies.
+            </p>
+
+            <div class="info-grid">
+              <article class="info-card tilt-card">
+                <span class="info-label">Education</span>
+                <strong>B.Sc Computer Science</strong>
+              </article>
+
+              <article class="info-card tilt-card">
+                <span class="info-label">Focus</span>
+                <strong>Programming • Web • Cybersecurity</strong>
+              </article>
+
+              <article class="info-card tilt-card">
+                <span class="info-label">Approach</span>
+                <strong>Build, learn, repeat</strong>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <div class="section-heading centered reveal">
+            <p class="kicker">02 / Toolkit</p>
+            <h2 id="skills-title">Skills</h2>
+            <p>Technologies I’m learning and using with a strong focus on fundamentals.</p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card skill-blue reveal tilt-card">
+              <div class="skill-icon">C</div>
+              <h3>C</h3>
+              <p>Programming Fundamentals</p>
+              <div class="skill-level"><span class="level-dot"></span> Learning</div>
+            </article>
+
+            <article class="skill-card skill-amber reveal tilt-card">
+              <div class="skill-icon">Py</div>
+              <h3>Python</h3>
+              <p>Programming &amp; Automation</p>
+              <div class="skill-level"><span class="level-dot"></span> Learning</div>
+            </article>
+
+            <article class="skill-card skill-orange reveal tilt-card">
+              <div class="skill-icon">&lt;/&gt;</div>
+              <h3>HTML</h3>
+              <p>Web Structure</p>
+              <div class="skill-level"><span class="level-dot"></span> Familiar</div>
+            </article>
+
+            <article class="skill-card skill-sky reveal tilt-card">
+              <div class="skill-icon">CSS</div>
+              <h3>CSS</h3>
+              <p>UI &amp; Styling</p>
+              <div class="skill-level"><span class="level-dot"></span> Working Knowledge</div>
+            </article>
+
+            <article class="skill-card skill-gold reveal tilt-card">
+              <div class="skill-icon">JS</div>
+              <h3>JavaScript</h3>
+              <p>Interactive Web Basics</p>
+              <div class="skill-level"><span class="level-dot"></span> Learning</div>
+            </article>
+
+            <article class="skill-card skill-red reveal tilt-card">
+              <div class="skill-icon">Git</div>
+              <h3>Git</h3>
+              <p>Version Control</p>
+              <div class="skill-level"><span class="level-dot"></span> Working Knowledge</div>
+            </article>
+
+            <article class="skill-card skill-purple reveal tilt-card">
+              <div class="skill-icon">GH</div>
+              <h3>GitHub</h3>
+              <p>Collaboration &amp; Projects</p>
+              <div class="skill-level"><span class="level-dot"></span> Familiar</div>
+            </article>
+
+            <article class="skill-card skill-blue-soft reveal tilt-card">
+              <div class="skill-icon">VS</div>
+              <h3>VS Code</h3>
+              <p>Development Environment</p>
+              <div class="skill-level"><span class="level-dot"></span> Working Knowledge</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-heading projects-heading reveal">
+            <div>
+              <p class="kicker">03 / Work</p>
+              <h2 id="projects-title">Projects</h2>
+            </div>
+            <p>Building practical work and adding projects over time.</p>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card featured reveal tilt-card">
+              <div class="project-visual visual-one">
+                <span class="project-badge">Project 01</span>
+              </div>
+              <div class="project-body">
+                <p class="project-type">Upcoming</p>
+                <h3>Project 01</h3>
+                <p>Coming Soon</p>
+                <div class="project-tags">
+                  <span>To be added</span>
+                  <span>In progress</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal tilt-card">
+              <div class="project-visual visual-two">
+                <span class="project-badge">Project 02</span>
+              </div>
+              <div class="project-body">
+                <p class="project-type">Upcoming</p>
+                <h3>Project 02</h3>
+                <p>Coming Soon</p>
+                <div class="project-tags">
+                  <span>Future</span>
+                  <span>Portfolio</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal tilt-card">
+              <div class="project-visual visual-three">
+                <span class="project-badge">Project 03</span>
+              </div>
+              <div class="project-body">
+                <p class="project-type">Upcoming</p>
+                <h3>Project 03</h3>
+                <p>Coming Soon</p>
+                <div class="project-tags">
+                  <span>Concept</span>
+                  <span>Build phase</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact-card reveal">
+            <p class="kicker">04 / Connect</p>
+            <h2 id="contact-title">Let's Connect</h2>
+            <p>
+              I’m open to learning, collaboration, and opportunities to build something meaningful.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="mailto:your-email@example.com">Email Me</a>
+              <a class="button button-secondary" href="YOUR_LINKEDIN_URL" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="button button-ghost" href="https://github.com/johnsnow-cmd" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="site-footer"><div class="container footer-top"><a class="logo" href="#home">SANTHOSH<span>.</span></a><p>Built with curiosity and code.</p><div class="footer-links"><a href="https://github.com/johnsnow-cmd/Hamster" target="_blank" rel="noreferrer">GitHub</a><a href="#contact">LinkedIn</a><a href="#contact">Email</a></div></div><div class="container copyright">© <span id="year"></span> Santhosh. Built for the next idea.</div></footer>
-</body>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <a class="logo" href="#home" aria-label="Santhosh home">SANTHOSH<span>.</span></a>
+        <p>Built with curiosity and code.</p>
+
+        <div class="footer-links" aria-label="Footer links">
+          <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/johnsnow-cmd" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <div class="container copyright">
+        © <span id="year">2026</span> SANTHOSH.
+      </div>
+    </footer>
+  </body>
 </html>
