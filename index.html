@@ -1,19 +1,406 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#08091a"><meta name="description" content="Santhosh — Computer Science student building thoughtful things with code."><title>Santhosh — Code, curiosity, in motion</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--night:#08091a;--ink:#f6f3ff;--muted:#9b9ab8;--line:#ffffff1f;--violet:#8b5cf6;--aqua:#62f2d0;--rose:#ff6d9c;--gold:#f5c76a;--ease:cubic-bezier(.22,1,.36,1)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--night);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}::selection{background:var(--aqua);color:var(--night)}.noise{position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:20;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}.orb{position:fixed;width:42vw;height:42vw;border-radius:50%;filter:blur(80px);opacity:.16;pointer-events:none;z-index:-1;transition:transform 1.2s var(--ease)}.orb-a{background:var(--violet);top:-20vw;right:-12vw}.orb-b{background:var(--rose);bottom:-25vw;left:-15vw}.orb-c{background:var(--aqua);width:25vw;height:25vw;top:45%;left:40%;opacity:.08}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}.nav{height:84px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:3}.brand{font:700 1rem/1 "Space Grotesk"}.brand em{color:var(--aqua);font-style:normal}.nav-links{display:flex;gap:30px;align-items:center;font-size:.82rem;color:var(--muted)}.nav-links a:hover{color:var(--ink)}.nav-cta{border:1px solid var(--line);padding:10px 16px;border-radius:100px;color:var(--ink)!important}.hero{min-height:calc(100vh - 84px);display:grid;align-items:center;position:relative;padding:90px 0 110px}.hero-grid{position:absolute;inset:0;opacity:.25;background-image:linear-gradient(#ffffff0b 1px,transparent 1px),linear-gradient(90deg,#ffffff0b 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(to bottom,#000,transparent 80%);pointer-events:none}.hero-copy{max-width:850px;position:relative}.eyebrow{color:var(--aqua);font:500 .72rem "Space Grotesk";letter-spacing:.16em;text-transform:uppercase;margin:0 0 25px}.eyebrow span{display:inline-block;width:7px;height:7px;background:var(--aqua);border-radius:50%;margin-right:10px;box-shadow:0 0 20px var(--aqua)}h1,h2,h3{font-family:"Space Grotesk",sans-serif;margin:0;line-height:1.02;letter-spacing:-.06em}h1{font-size:clamp(4.3rem,10vw,9.7rem);font-weight:600}h1 .gradient{background:linear-gradient(110deg,var(--aqua),#a78bfa 48%,var(--rose));-webkit-background-clip:text;background-clip:text;color:transparent}.hero-sub{font-size:clamp(1.1rem,2vw,1.35rem);color:var(--muted);max-width:520px;margin:32px 0 40px}.hero-actions{display:flex;gap:14px;align-items:center}.button{display:inline-block;padding:14px 21px;border-radius:100px;font-weight:600;font-size:.88rem;transition:transform .3s,box-shadow .3s}.button:hover{transform:translateY(-3px)}.primary{background:var(--ink);color:var(--night);box-shadow:0 8px 30px #ffffff1f}.secondary{border:1px solid var(--line);color:var(--muted)}.scroll{position:absolute;bottom:28px;right:0;color:var(--muted);font-size:.72rem;letter-spacing:.08em}.scroll i{display:inline-block;width:32px;height:1px;background:var(--muted);vertical-align:middle;margin-right:10px}section{padding:130px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:52px}.label{color:var(--gold);font:500 .73rem "Space Grotesk";letter-spacing:.13em;margin:0 0 15px}.section-head h2{font-size:clamp(2.8rem,6vw,5.7rem);font-weight:500}.section-intro{color:var(--muted);max-width:330px;margin:0;font-size:.98rem}.about{display:grid;grid-template-columns:1fr 1.3fr;gap:100px}.about-text{font-size:clamp(1.4rem,2.4vw,2rem);line-height:1.35;letter-spacing:-.025em;margin:0}.about-text strong{color:var(--aqua);font-weight:500}.about-meta{border-top:1px solid var(--line);margin-top:42px;padding-top:20px;display:flex;gap:70px;color:var(--muted);font-size:.85rem}.about-meta b{display:block;color:var(--ink);font-weight:500;margin-top:6px}.toolkit{background:#ffffff06;border-block:1px solid var(--line)}.skills{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.skill{min-height:200px;border:1px solid var(--line);border-radius:18px;padding:22px;background:linear-gradient(145deg,#ffffff12,#ffffff04);position:relative;overflow:hidden;transform-style:preserve-3d;transition:border-color .35s,box-shadow .35s}.skill:before{content:"";position:absolute;width:100px;height:100px;background:var(--accent);filter:blur(45px);opacity:.2;top:-35px;right:-20px}.skill:hover{border-color:var(--accent);box-shadow:0 20px 45px #0004}.skill:nth-child(1){--accent:var(--violet)}.skill:nth-child(2){--accent:var(--gold)}.skill:nth-child(3){--accent:var(--aqua)}.skill:nth-child(4){--accent:var(--rose)}.skill:nth-child(5){--accent:#b799ff}.skill-icon{font:600 1.2rem "Space Grotesk";color:var(--accent);position:relative}.skill h3{font-size:1.35rem;letter-spacing:-.03em;position:relative;margin-top:70px}.skill small{display:block;color:var(--muted);font-size:.76rem;margin-top:8px;position:relative}.projects{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.project{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#101128;min-height:340px;transform-style:preserve-3d;transition:border-color .35s}.project:hover{border-color:#ffffff4d}.project:nth-child(1){grid-row:span 2;min-height:698px}.project-art{height:240px;position:relative;overflow:hidden;background:radial-gradient(circle at 70% 30%,#62f2d04d,transparent 25%),linear-gradient(135deg,#151143,#28164c 50%,#101128)}.project:nth-child(1) .project-art{height:510px;background:radial-gradient(circle at 30% 40%,#ff6d9c61,transparent 23%),radial-gradient(circle at 80% 20%,#62f2d04d,transparent 25%),linear-gradient(135deg,#11102d,#321654)}.project-art:after{content:"";position:absolute;inset:20%;border:1px solid #ffffff38;transform:rotate(-18deg) skew(-18deg);box-shadow:0 0 50px #8b5cf666,inset 0 0 30px #62f2d021}.project-body{padding:23px}.project-kicker{color:var(--gold);font-size:.7rem;letter-spacing:.12em}.project h3{font-size:1.7rem;letter-spacing:-.04em;margin-top:10px}.project p{color:var(--muted);font-size:.9rem;margin:10px 0 0}.project-link{float:right;color:var(--aqua);font-size:1.2rem}.contact{padding-top:80px}.contact-box{border:1px solid var(--line);border-radius:28px;padding:80px 8%;background:radial-gradient(circle at 80% 20%,#8b5cf633,transparent 30%),linear-gradient(120deg,#ffffff0f,#ffffff04);position:relative;overflow:hidden}.contact-box h2{font-size:clamp(3.4rem,8vw,8rem);max-width:800px}.contact-box h2 span{color:var(--rose)}.contact-box p:not(.label){color:var(--muted);max-width:430px;margin:25px 0 32px}.footer{padding:35px 0 50px;color:var(--muted);font-size:.8rem;display:flex;justify-content:space-between;border-top:1px solid var(--line);margin-top:80px}.footer a:hover{color:var(--ink)}.reveal{opacity:0;transform:translateY(30px)}.loaded .reveal{animation:rise .9s var(--ease) forwards}.loaded .hero-copy{animation:heroIn 1.15s var(--ease) both}.loaded .hero-copy>*{opacity:0;animation:rise .8s var(--ease) forwards}.loaded .hero-copy h1{animation-delay:.18s}.loaded .hero-copy .hero-sub{animation-delay:.3s}.loaded .hero-copy .hero-actions{animation-delay:.42s}.loaded .skill:nth-child(2){animation-delay:.08s}.loaded .skill:nth-child(3){animation-delay:.16s}.loaded .skill:nth-child(4){animation-delay:.24s}.loaded .skill:nth-child(5){animation-delay:.32s}@keyframes rise{to{opacity:1;transform:none}}@keyframes heroIn{from{opacity:0;transform:translateY(25px) scale(.98)}to{opacity:1;transform:none}}@media(max-width:800px){.wrap{width:min(100% - 32px,600px)}.nav-links a:not(.nav-cta){display:none}.hero{min-height:calc(100vh - 84px);padding:65px 0 90px}h1{font-size:clamp(4rem,17vw,7rem)}.scroll{display:none}section{padding:90px 0}.about{display:block}.about-content{margin-top:38px}.section-head{display:block}.section-intro{margin-top:20px}.skills{grid-template-columns:repeat(2,1fr)}.skill{min-height:170px}.skill h3{margin-top:45px}.projects{display:block}.project,.project:nth-child(1){min-height:0;margin-bottom:16px}.project-art,.project:nth-child(1) .project-art{height:260px}.contact-box{padding:55px 25px}.footer{display:block}.footer a{display:inline-block;margin-top:15px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition:none!important}.reveal{opacity:1;transform:none}}
-</style>
-</head>
-<body><div class="noise" aria-hidden="true"></div><div class="orb orb-a" data-depth=".08"></div><div class="orb orb-b" data-depth="-.05"></div><div class="orb orb-c" data-depth=".12"></div>
-<header class="wrap nav"><a class="brand" href="#home">SANTHOSH<span><em>•</em></span></a><nav class="nav-links" aria-label="Main navigation"><a href="#about">About</a><a href="#skills">Toolkit</a><a href="#projects">Projects</a><a class="nav-cta" href="#contact">Let's talk ↗</a></nav></header>
-<main><section class="hero wrap" id="home"><div class="hero-grid"></div><div class="hero-copy"><p class="eyebrow"><span></span>Computer Science student · building in public</p><h1>Code with<br><span class="gradient">curiosity.</span></h1><p class="hero-sub">I'm Santhosh — learning how systems work, making things with intention, and finding the interesting edge between logic and imagination.</p><div class="hero-actions"><a class="button primary" href="#projects">Explore my work ↓</a><a class="button secondary" href="#about">A little about me</a></div></div><a class="scroll" href="#about"><i></i>scroll to explore</a></section>
-<section class="wrap" id="about"><div class="section-head reveal"><div><p class="label">01 / the person behind the code</p><h2>About me</h2></div><p class="section-intro">Still learning. Already building. Always asking better questions.</p></div><div class="about reveal"><div><p class="about-text">I’m a <strong>Computer Science student</strong> drawn to the fundamentals: understanding problems deeply, writing thoughtful code, and turning a blank page into something useful.</p><div class="about-meta"><div>Based in<b>India</b></div><div>Currently<b>Learning by building</b></div></div></div><div><p class="about-text">My approach is simple: stay curious, keep things practical, and make every project a little more ambitious than the last. This is a living record of that process.</p></div></div></section>
-<section class="toolkit" id="skills"><div class="wrap"><div class="section-head reveal"><div><p class="label">02 / what I use</p><h2>My toolkit</h2></div><p class="section-intro">A focused set of tools for thinking, making, and shipping.</p></div><div class="skills"><article class="skill reveal"><span class="skill-icon">C/</span><h3>C</h3><small>Core programming</small></article><article class="skill reveal"><span class="skill-icon">Py/</span><h3>Python</h3><small>Exploration & automation</small></article><article class="skill reveal"><span class="skill-icon">⌘</span><h3>Git</h3><small>Version control</small></article><article class="skill reveal"><span class="skill-icon">VS/</span><h3>VS Code</h3><small>Daily workspace</small></article><article class="skill reveal"><span class="skill-icon">◈</span><h3>GitHub</h3><small>Collaborate & share</small></article></div></div></section>
-<section class="wrap" id="projects"><div class="section-head reveal"><div><p class="label">03 / experiments & output</p><h2>Selected work</h2></div><p class="section-intro">A few places where curiosity became something you can click.</p></div><div class="projects"><article class="project reveal tilt"><div class="project-art"></div><div class="project-body"><span class="project-kicker">FEATURED / 01</span><a class="project-link" href="https://github.com/johnsnow-cmd/Hamster" target="_blank" rel="noreferrer">↗</a><h3>Personal portfolio</h3><p>A living space for my work, experiments, and the ideas I’m still figuring out.</p></div></article><article class="project reveal tilt"><div class="project-art"></div><div class="project-body"><span class="project-kicker">EXPERIMENT / 02</span><h3>Next idea</h3><p>Currently taking shape. Check back soon.</p></div></article><article class="project reveal tilt"><div class="project-art"></div><div class="project-body"><span class="project-kicker">EXPERIMENT / 03</span><h3>More to come</h3><p>The best projects usually start as a question.</p></div></article></div></section>
-<section class="contact wrap" id="contact"><div class="contact-box reveal"><p class="label">04 / get in touch</p><h2>Have an idea?<br><span>Let’s make it real.</span></h2><p>I’m always open to a thoughtful conversation, a new challenge, or a good question.</p><a class="button primary" href="mailto:jonsnow0000winter@gmail.com">Say hello ↗</a></div></section></main>
-<footer class="wrap footer"><span>© 2026 Santhosh. Made with curiosity.</span><a href="#home">Back to top ↑</a></footer>
-<script>document.documentElement.classList.add('loaded');const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!reduce){const orbs=document.querySelectorAll('[data-depth]');addEventListener('pointermove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;orbs.forEach(o=>{const d=+o.dataset.depth;o.style.transform=`translate(${x*70*d}px,${y*70*d}px)`})});document.querySelectorAll('.tilt').forEach(card=>{card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(900px) rotateX(${y*-5}deg) rotateY(${x*6}deg) translateY(-5px)`});card.addEventListener('pointerleave',()=>card.style.transform='')})}</script>
-</body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#030308" />
+    <meta
+      name="description"
+      content="Santhosh — Computer Science Student building with code, exploring technology, and creating the future."
+    />
+    <title>Santhosh | Creative Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-bg" aria-hidden="true">
+      <div class="bg-glow glow-1"></div>
+      <div class="bg-glow glow-2"></div>
+      <div class="bg-glow glow-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="Santhosh home">
+          <span class="brand-mark">S</span>
+          <span>SANTHOSH.</span>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a
+            class="nav-social"
+            href="https://www.linkedin.com/in/santhosh-m-35a59a3ab/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            class="nav-social"
+            href="https://github.com/johnsnow-cmd"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+          <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="scene" aria-hidden="true">
+          <div class="planet planet-a"></div>
+          <div class="planet planet-b"></div>
+          <div class="ring ring-a"></div>
+          <div class="ring ring-b"></div>
+          <div class="floating-cube cube-a"></div>
+          <div class="floating-cube cube-b"></div>
+          <div class="floating-cube cube-c"></div>
+          <div class="signal signal-a"></div>
+          <div class="signal signal-b"></div>
+          <div class="mountain mountain-a"></div>
+          <div class="mountain mountain-b"></div>
+          <div class="code-orb code-orb-1">C</div>
+          <div class="code-orb code-orb-2">&lt;/&gt;</div>
+          <div class="code-orb code-orb-3">[]</div>
+          <div class="code-orb code-orb-4">{ }</div>
+          <div class="particle s1"></div>
+          <div class="particle s2"></div>
+          <div class="particle s3"></div>
+          <div class="particle s4"></div>
+          <div class="particle s5"></div>
+          <div class="particle s6"></div>
+          <div class="particle s7"></div>
+          <div class="particle s8"></div>
+          <div class="particle s9"></div>
+          <div class="particle s10"></div>
+        </div>
+
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <div class="eyebrow-wrap">
+              <span class="eyebrow-dot"></span>
+              <span class="eyebrow-text">COMPUTER SCIENCE STUDENT</span>
+            </div>
+
+            <h1>
+              Hi, I'm
+              <span class="gradient-text">Santhosh.</span>
+            </h1>
+
+            <p class="subtitle">
+              Building with code. Exploring technology. Creating the future.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button primary" href="#projects">VIEW MY WORK</a>
+              <a
+                class="button secondary"
+                href="https://www.linkedin.com/in/santhosh-m-35a59a3ab/"
+                target="_blank"
+                rel="noreferrer"
+                >LINKEDIN</a
+              >
+              <a
+                class="button tertiary"
+                href="https://github.com/johnsnow-cmd"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="Futuristic developer illustration">
+            <div class="terminal-shell">
+              <div class="terminal-header">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="terminal-body">
+                <div class="module module-left">
+                  <span>int main()</span>
+                  <span>{</span>
+                  <span>security();</span>
+                  <span>web();</span>
+                  <span>return 0;</span>
+                  <span>}</span>
+                </div>
+
+                <div class="module module-center">
+                  <div class="core-ring"></div>
+                  <div class="core-node node-1"></div>
+                  <div class="core-node node-2"></div>
+                  <div class="core-node node-3"></div>
+                  <div class="core-node node-4"></div>
+                </div>
+
+                <div class="module module-right">
+                  <span>python</span>
+                  <span>cybersecurity</span>
+                  <span>backend</span>
+                  <span>learning</span>
+                  <span>build</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">ABOUT ME</p>
+            <h2>About</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-copy reveal">
+              <p>
+                I'm a Computer Science student interested in programming, web
+                development, and exploring cybersecurity. I'm focused on
+                strengthening my fundamentals, building practical projects, and
+                continuously learning new technologies.
+              </p>
+            </div>
+
+            <div class="info-stack reveal">
+              <article class="info-card">
+                <span class="info-label">Education</span>
+                <strong>B.Sc Computer Science</strong>
+              </article>
+
+              <article class="info-card">
+                <span class="info-label">Focus</span>
+                <strong>Programming • Web Development • Cybersecurity</strong>
+              </article>
+
+              <article class="info-card">
+                <span class="info-label">Currently Learning</span>
+                <strong>Backend Development • Security Fundamentals</strong>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills section" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">SKILLS</p>
+            <h2>Core Toolkit</h2>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card reveal">
+              <div class="skill-icon">C</div>
+              <h3>C</h3>
+              <p>Core programming fundamentals and problem-solving logic.</p>
+            </article>
+
+            <article class="skill-card reveal">
+              <div class="skill-icon">Py</div>
+              <h3>Python</h3>
+              <p>Automation, scripting, and solving real-world problems.</p>
+            </article>
+
+            <article class="skill-card reveal">
+              <div class="skill-icon">HTML</div>
+              <h3>HTML</h3>
+              <p>Semantic structure and accessible front-end foundations.</p>
+            </article>
+
+            <article class="skill-card reveal">
+              <div class="skill-icon">CSS</div>
+              <h3>CSS</h3>
+              <p>Layouts, styling systems, responsiveness, and polish.</p>
+            </article>
+
+            <article class="skill-card reveal">
+              <div class="skill-icon">JS</div>
+              <h3>JavaScript</h3>
+              <p>Basics of interactivity and front-end behavior.</p>
+            </article>
+
+            <article class="skill-card reveal">
+              <div class="skill-icon">Git</div>
+              <h3>Git</h3>
+              <p>Version control and structured development workflow.</p>
+            </article>
+
+            <article class="skill-card reveal">
+              <div class="skill-icon">GitHub</div>
+              <h3>GitHub</h3>
+              <p>Code hosting, collaboration, and project sharing.</p>
+            </article>
+
+            <article class="skill-card reveal">
+              <div class="skill-icon">VS</div>
+              <h3>VS Code</h3>
+              <p>Daily workspace for coding, testing, and debugging.</p>
+            </article>
+
+            <article class="skill-card reveal">
+              <div class="skill-icon">Sec</div>
+              <h3>Cybersecurity</h3>
+              <p>Currently learning security principles and fundamentals.</p>
+            </article>
+
+            <article class="skill-card reveal">
+              <div class="skill-icon">BE</div>
+              <h3>Backend</h3>
+              <p>Currently learning server-side development concepts.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section" id="projects">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">PROJECTS</p>
+            <h2>Selected Work</h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card reveal">
+              <div class="project-art art-one">
+                <span>PROJECT 01</span>
+              </div>
+              <div class="project-body">
+                <h3>Coming Soon</h3>
+                <p>Project details will be added here as work develops.</p>
+                <div class="project-meta">
+                  <span>Placeholder</span>
+                  <span>Responsive</span>
+                </div>
+                <div class="project-actions">
+                  <button class="mini-btn" type="button">GitHub</button>
+                  <button class="mini-btn alt" type="button">Live Demo</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-art art-two">
+                <span>PROJECT 02</span>
+              </div>
+              <div class="project-body">
+                <h3>Coming Soon</h3>
+                <p>Project details will be added here as work develops.</p>
+                <div class="project-meta">
+                  <span>Placeholder</span>
+                  <span>Responsive</span>
+                </div>
+                <div class="project-actions">
+                  <button class="mini-btn" type="button">GitHub</button>
+                  <button class="mini-btn alt" type="button">Live Demo</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-art art-three">
+                <span>PROJECT 03</span>
+              </div>
+              <div class="project-body">
+                <h3>Coming Soon</h3>
+                <p>Project details will be added here as work develops.</p>
+                <div class="project-meta">
+                  <span>Placeholder</span>
+                  <span>Responsive</span>
+                </div>
+                <div class="project-actions">
+                  <button class="mini-btn" type="button">GitHub</button>
+                  <button class="mini-btn alt" type="button">Live Demo</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="beyond section" aria-labelledby="beyond-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">BEYOND CODE</p>
+            <h2 id="beyond-title">Calisthenics</h2>
+          </div>
+
+          <div class="beyond-card reveal">
+            <div class="beyond-copy">
+              <p>
+                Bodyweight training focused on strength, control, discipline and
+                progressive skills.
+              </p>
+            </div>
+
+            <div class="beyond-visual" aria-hidden="true">
+              <div class="ring-mini ring-mini-1"></div>
+              <div class="ring-mini ring-mini-2"></div>
+              <div class="ring-mini ring-mini-3"></div>
+              <div class="beyond-core"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="container">
+          <div class="contact-panel reveal">
+            <p class="section-kicker">LET'S CONNECT</p>
+            <h2>Have an idea, project, or opportunity? Let's connect.</h2>
+            <div class="contact-actions">
+              <a
+                class="button primary"
+                href="https://www.linkedin.com/in/santhosh-m-35a59a3ab/"
+                target="_blank"
+                rel="noreferrer"
+                >LinkedIn</a
+              >
+              <a
+                class="button secondary"
+                href="https://github.com/johnsnow-cmd"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub</a
+              >
+              <button class="button tertiary" type="button" aria-label="Email button unavailable">
+                Email
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 Santhosh.</p>
+        <a href="#home">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
